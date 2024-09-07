@@ -5,10 +5,10 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(MyApp());
+  runApp(Test_firebase());
 }
 
-class MyApp extends StatelessWidget {
+class Test_firebase extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -28,9 +28,9 @@ class _HomePageState extends State<HomePage> {
   void _addData() async {
     try {
       await _firestore.collection('users').add({
-        'name': 'John Doe',
-        'age': 30,
-        'email': 'john.doe@example.com',
+        'name': 'Prueba',
+        'age': 99,
+        'email': 'prueba',
       });
       print('Document added successfully');
     } catch (e) {
